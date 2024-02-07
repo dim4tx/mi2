@@ -1,0 +1,16 @@
+function calcularNotaFinal(nota1, nota2) {
+  // Porcentajes de las notas
+  const porcentajeNota1 = 0.3;
+  const porcentajeNota2 = 0.3;
+  const porcentajeNota3 = 0.4;
+
+  // Calcular la nota necesaria en la nota 3 para aprobar
+  const notaNecesaria = (3.5 - (nota1 * porcentajeNota1 + nota2 * porcentajeNota2)) / porcentajeNota3;
+
+  return notaNecesaria;
+}
+
+
+const notaNecesaria = calcularNotaFinal(nota1Conocida, nota2Conocida);
+
+console.log(`El estudiante necesita sacar al menos ${notaNecesaria.toFixed(2)} en la nota 3 para aprobar la materia.`);
